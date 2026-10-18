@@ -1,0 +1,30 @@
+name: Report a license or neutrality concern
+description: A listed project is not open source, changed license, or an entry looks promotional or biased.
+title: "[License] "
+labels: ["license-concern"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry name
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Concern
+      options:
+        - License changed or is not open source
+        - Component or dataset with a different license
+        - Capability requires a proprietary service
+        - Entry reads as promotional
+        - Possible competitor or conflict of interest
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link the LICENSE file and commit, terms of service, or the specific text.
+    validations:
+      required: true

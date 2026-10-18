@@ -1,0 +1,30 @@
+name: Update or flag an entry
+description: Report outdated information, an archived project, or a change in an existing entry.
+title: "[Update] "
+labels: ["update-entry"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry name
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What changed?
+      options:
+        - Description or metadata is inaccurate
+        - Project archived or unmaintained
+        - New release or renamed or moved repository
+        - Open-source boundary changed (new paid-only features)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details and evidence
+      description: Link the release page, archive notice, commit or announcement.
+    validations:
+      required: true

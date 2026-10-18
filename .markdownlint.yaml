@@ -1,0 +1,9 @@
+# Keep linting light: the point is consistency, not style policing.
+default: true
+MD013: false        # long lines are fine in tables and prose
+MD033: false        # allow inline HTML comments used for generated markers
+MD041: false
+MD024:
+  siblings_only: true
+MD036: false
+MD060: false

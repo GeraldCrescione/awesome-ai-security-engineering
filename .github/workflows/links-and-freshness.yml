@@ -1,0 +1,56 @@
+name: Links and freshness
+
+# Weekly review aid. This workflow only reports; it never edits or removes entries.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check external links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config .lychee.toml --no-progress "**/*.md" "data/resources.yml" "maintainers/candidates.yml"
+          output: lychee-report.md
+          fail: false
+
+      - name: Open an issue for a human to review broken links
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Link check report
+          content-filepath: lychee-report.md
+          labels: broken-link
+
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Report stale or partially verified entries
+        run: python scripts/validate.py | tee freshness.txt || true
+
+      - name: Open an issue if there are warnings
+        run: |
+          if grep -q '^WARN' freshness.txt; then
+            grep '^WARN' freshness.txt > body.md
+            gh issue create --title "Entries to re-verify" --label update-entry --body-file body.md
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}

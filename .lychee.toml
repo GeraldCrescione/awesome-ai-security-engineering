@@ -1,0 +1,8 @@
+# Link checker settings (used by .github/workflows/links-and-freshness.yml)
+max_retries = 2
+timeout = 20
+accept = [200, 204, 301, 302, 403, 429]
+exclude = [
+  "^https://github.com/login",
+  "^https://raw.githubusercontent.com/.*/main/LICENSE.md$",
+]

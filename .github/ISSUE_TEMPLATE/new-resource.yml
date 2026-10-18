@@ -1,0 +1,118 @@
+name: Suggest a resource
+description: Propose an open-source tool, open standard, framework, benchmark or lab for the list.
+title: "[Resource] "
+labels: ["new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please read CONTRIBUTING.md in the repository root first. Only open-source software, qualifying open standards and open research with reproducible artifacts are listed. Search `data/resources.yml` and `maintainers/research-inventory.md` to avoid duplicates.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official URL
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source repository or specification URL
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License (SPDX identifier) and link to the LICENSE file
+      description: Read the file at the default branch. Note any component with a different license.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does it do? Factual and concise; no marketing language.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Open-Source Tool
+        - Open Standard / Protocol
+        - Open Security Framework
+        - Open Research
+        - Benchmark
+        - Reference Implementation
+        - Learning / Lab
+        - Engineering Best Practice
+    validations:
+      required: true
+  - type: checkboxes
+    id: lifecycle
+    attributes:
+      label: Relevant lifecycle stages
+      options:
+        - label: Discover
+        - label: Design
+        - label: Build
+        - label: Break
+        - label: Defend
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Primary technical domain
+      options:
+        - AI-Assisted Development Security
+        - LLM and Model Security
+        - Agentic AI Security
+        - MCP and Agent Skills Security
+        - AI Supply Chain Security
+        - Agent Identity and Access
+        - Data and RAG Security
+        - AI Red Teaming and Evaluations
+        - AI Runtime Security
+        - AI Security Governance and Engineering Controls
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this project matter for AI Security Engineering?
+      description: What can an engineer do with it that they cannot do with listed resources?
+    validations:
+      required: true
+  - type: textarea
+    id: maintenance
+    attributes:
+      label: Evidence of maintenance
+      description: Latest release link and date, recent commits, whether the repository is archived.
+    validations:
+      required: true
+  - type: textarea
+    id: openness
+    attributes:
+      label: Open-source boundary
+      description: If the project is open-core or needs a hosted service, account or token for any listed capability, explain which capabilities work fully with the open-source code.
+  - type: textarea
+    id: affiliation
+    attributes:
+      label: Your relationship to the project
+      description: Creator, maintainer, employee, user? Affiliations are fine but must be disclosed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: This submission is not promotional and I am not asking for preferential placement.
+          required: true
+        - label: I read the LICENSE file myself and the information above is accurate to the best of my knowledge.
+          required: true

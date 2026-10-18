@@ -1,0 +1,22 @@
+name: Suggest a taxonomy improvement
+description: Propose a change to the lifecycle stages, technical domains or resource types.
+title: "[Taxonomy] "
+labels: ["taxonomy"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is confusing or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected resources
+      description: Which current or candidate entries would be classified differently?
