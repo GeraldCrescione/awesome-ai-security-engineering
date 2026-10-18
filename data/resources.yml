@@ -1,0 +1,639 @@
+# Single source of truth for every published resource.
+# Edit this file, then run `python scripts/generate.py` and `python scripts/validate.py`.
+# Schema and allowed values are enforced by scripts/validate.py.
+#
+# verified_by: direct   = a maintainer-run check read the primary source (LICENSE file / official page).
+# verified_by: delegated = the primary source was read by a delegated research pass; spot-check welcome.
+# last_release is the latest release/version evidence found on the verification date, not a promise of maintenance.
+
+resources:
+  # ------------------------------------------------------------------ frameworks, standards
+  - id: owasp-genai-security-project
+    name: OWASP GenAI Security Project
+    url: https://genai.owasp.org/
+    source: https://github.com/GenAI-Security-Project
+    summary: Umbrella OWASP project for LLM and agentic AI security guidance, cheat sheets and initiatives.
+    description: >-
+      OWASP project that publishes the LLM Top 10 (2025 edition and a 2026 edition), the Top 10 for
+      Agentic Applications, cheat sheets, an AI red-teaming initiative and other guidance. Useful as the
+      shared vocabulary for AI-specific risks.
+    type: Open Security Framework
+    lifecycle: [design, break]
+    domains: [llm-model, agentic, governance-controls]
+    license: CC-BY-SA-4.0
+    license_note: Site-wide statement ("unless otherwise specified"); individual repositories may differ. Share-alike applies if you reuse the text.
+    license_evidence: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    maintainer: OWASP Foundation
+    last_release: "2026-08-03 (LLM Top 10 2026 v1.0 listed on project resources)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Guidance documents, not software. Check the license of each individual artifact before reuse.
+
+  - id: owasp-top10-agentic-2026
+    name: OWASP Top 10 for Agentic Applications 2026
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    source: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    summary: Peer-reviewed list of the ten most critical risks for autonomous, tool-using AI agents.
+    description: >-
+      Risk list for AI agents that plan, act and make decisions across workflows, such as goal hijack,
+      tool misuse and identity abuse. The project page states it was developed with more than 100
+      industry experts, researchers and practitioners and was published on 2025-12-09.
+    type: Open Security Framework
+    lifecycle: [design, break]
+    domains: [agentic, agent-identity, governance-controls]
+    license: CC-BY-SA-4.0
+    license_note: From the site-wide license statement on genai.owasp.org.
+    license_evidence: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    maintainer: OWASP GenAI Security Project
+    last_release: "2025-12-09"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: A risk taxonomy, not a control catalogue. Treat it as a threat-modeling input.
+
+  - id: mitre-atlas
+    name: MITRE ATLAS
+    url: https://atlas.mitre.org/
+    source: https://github.com/mitre-atlas/atlas-data
+    summary: Knowledge base of adversary tactics, techniques and case studies against AI-enabled systems.
+    description: >-
+      Matrix of tactics, techniques, mitigations and real-world case studies for attacks on AI systems,
+      distributed as YAML and STIX data with Navigator support. Modeled on MITRE ATT&CK.
+    type: Open Security Framework
+    lifecycle: [design, break]
+    domains: [llm-model, agentic, governance-controls]
+    license: Apache-2.0
+    license_note: Applies to the atlas-data repository. Website terms were not separately verified.
+    license_evidence: https://github.com/mitre-atlas/atlas-data
+    maintainer: MITRE
+    last_release: "2026-09-14 (content version 2026.09)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Single-organization governance. Contributions arrive through GitHub.
+
+  - id: model-context-protocol
+    name: Model Context Protocol (MCP)
+    url: https://modelcontextprotocol.io/
+    source: https://github.com/modelcontextprotocol/modelcontextprotocol
+    summary: Open protocol connecting AI applications to tools and data, with an OAuth-based authorization model.
+    description: >-
+      Client/server protocol for exposing tools, resources and prompts to AI applications. The
+      specification includes an authorization section and security considerations that define trust
+      boundaries between hosts, clients and servers. Current spec revision found: 2026-07-28.
+    type: Open Standard / Protocol
+    lifecycle: [design, build]
+    domains: [mcp-skills, agent-identity]
+    license: Apache-2.0 (spec, in transition from MIT); CC-BY-4.0 (non-spec docs)
+    license_note: The repository LICENSE describes a transition from MIT to Apache-2.0; older contributions may remain MIT.
+    license_evidence: https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/LICENSE
+    maintainer: Model Context Protocol, a Series of LF Projects, LLC (Linux Foundation; Agentic AI Foundation)
+    last_release: "2026-07-28 (spec revision)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Maintainer-led governance (SEP process). A protocol, not a security control; its security model is only as good as each implementation.
+
+  - id: cyclonedx
+    name: CycloneDX
+    url: https://cyclonedx.org/
+    source: https://github.com/CycloneDX/specification
+    summary: Bill-of-materials standard (ECMA-424) with ML-BOM support for models and datasets.
+    description: >-
+      Full-stack BOM specification for software, services and ML components. Its ML-BOM capability lets
+      teams inventory models and datasets alongside code dependencies; the format is standardized as
+      ECMA-424.
+    type: Open Standard / Protocol
+    lifecycle: [discover, build]
+    domains: [supply-chain, governance-controls]
+    license: Apache-2.0
+    license_note: Schemas under Apache-2.0; ECMA-424 is published under Ecma's royalty-free patent policy.
+    license_evidence: https://raw.githubusercontent.com/CycloneDX/specification/master/README.md
+    maintainer: OWASP Foundation; Ecma TC54
+    last_release: "2025-10-21 (spec 1.7)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Which spec version introduced ML-BOM was not confirmed; check the spec history before citing it.
+
+  - id: cosai-ws4-secure-design-agentic
+    name: CoSAI Secure Design Patterns for Agentic Systems
+    url: https://www.coalitionforsecureai.org/
+    source: https://github.com/cosai-oasis/ws4-secure-design-agentic-systems
+    summary: OASIS-hosted whitepapers and design patterns for MCP security and agentic identity and access management.
+    description: >-
+      Coalition for Secure AI (an OASIS Open Project) workstream 4 repository with whitepapers on MCP
+      security and agentic identity and access management, plus design-pattern content for secure
+      agentic systems.
+    type: Reference Implementation
+    lifecycle: [design]
+    domains: [agentic, mcp-skills, agent-identity]
+    license: CC-BY-4.0
+    license_note: LICENSE.md also carries an OASIS non-assertion covenant.
+    license_evidence: https://raw.githubusercontent.com/cosai-oasis/ws4-secure-design-agentic-systems/main/LICENSE.md
+    maintainer: CoSAI (OASIS Open)
+    last_release: "repository updated 2026-08-26 (no tagged release)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Reference content (papers and patterns), not deployable code.
+
+  - id: opentelemetry-genai-semconv
+    name: OpenTelemetry GenAI Semantic Conventions
+    url: https://opentelemetry.io/docs/specs/semconv/gen-ai/
+    source: https://github.com/open-telemetry/semantic-conventions
+    summary: Vendor-neutral span, metric and attribute conventions for tracing GenAI calls, agents and tool use.
+    description: >-
+      Standard attribute and span definitions (for example agent invocation and tool-call spans) so that
+      agent activity can be traced with ordinary OpenTelemetry pipelines. Provides the telemetry that
+      runtime monitoring and incident investigation depend on.
+    type: Open Standard / Protocol
+    lifecycle: [defend]
+    domains: [runtime, agentic]
+    license: Apache-2.0
+    license_note: Repository code and schemas are Apache-2.0; the opentelemetry.io docs are CC-BY-4.0. The GenAI conventions are moving to github.com/open-telemetry/semantic-conventions-genai, whose license file was not read.
+    license_evidence: https://raw.githubusercontent.com/open-telemetry/semantic-conventions/main/LICENSE
+    maintainer: OpenTelemetry (CNCF)
+    last_release: "semconv 1.44.0 (date not verified)"
+    verification: partial
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Maturity (stable vs. development) of the GenAI conventions was not confirmed. It is an observability standard, not a security control.
+
+  - id: sigstore-model-transparency
+    name: Sigstore model-transparency (model-signing)
+    url: https://www.sigstore.dev/
+    source: https://github.com/sigstore/model-transparency
+    summary: Python library and CLI for signing and verifying ML model artifacts with Sigstore.
+    description: >-
+      Signs and verifies model files so consumers can check integrity and provenance before loading them.
+      Supports Sigstore keyless signing as well as key- and certificate-based signing, with in-toto/DSSE bundles.
+    type: Open-Source Tool
+    lifecycle: [build]
+    domains: [supply-chain]
+    license: Apache-2.0
+    license_note: Built with OpenSSF.
+    license_evidence: https://github.com/sigstore/model-transparency
+    maintainer: Sigstore community / OpenSSF
+    last_release: "v1.0 announced 2025-04-04"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Signing proves who published a model, not that the model is safe.
+
+  - id: open-policy-agent
+    name: Open Policy Agent (OPA)
+    url: https://www.openpolicyagent.org/
+    source: https://github.com/open-policy-agent/opa
+    summary: General-purpose policy engine (Rego) for deterministic authorization and policy-as-code.
+    description: >-
+      CNCF graduated policy engine used to express and enforce authorization and guardrail rules as code.
+      Not AI-specific; included as the deterministic control layer that AI agents' tool permissions can be
+      checked against.
+    type: Open-Source Tool
+    lifecycle: [design, defend]
+    domains: [agent-identity, governance-controls, runtime]
+    license: Apache-2.0
+    license_note: ""
+    license_evidence: https://github.com/open-policy-agent/opa
+    maintainer: CNCF project (original creators now employed by Apple; the project states governance and licensing are unchanged)
+    last_release: "v1.21.2 (12 Oct, year inferred as 2026)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Foundational security tool rather than an AI tool. Stewardship changed in 2025-2026; review the project's own statement.
+
+  # ------------------------------------------------------------------ break
+  - id: garak
+    name: garak
+    url: https://github.com/NVIDIA/garak
+    source: https://github.com/NVIDIA/garak
+    summary: LLM vulnerability scanner that probes models and applications with many attack and failure modes.
+    description: >-
+      Command-line scanner that runs probes (prompt injection, jailbreaks, data leakage and others) against
+      an LLM endpoint and evaluates the responses with detectors.
+    type: Open-Source Tool
+    lifecycle: [break]
+    domains: [llm-model, red-teaming]
+    license: Apache-2.0
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/NVIDIA/garak/main/LICENSE
+    maintainer: NVIDIA
+    last_release: "0.17.1 (2026-10-16, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Scan results are probabilistic; repeat runs before drawing conclusions.
+
+  - id: pyrit
+    name: PyRIT
+    url: https://microsoft.github.io/PyRIT/
+    source: https://github.com/microsoft/PyRIT
+    summary: Python framework for automated and human-assisted red teaming of generative AI systems.
+    description: >-
+      Library from the Microsoft AI Red Team that orchestrates attacks, converters, targets and scoring to
+      identify risks in generative AI systems.
+    type: Open-Source Tool
+    lifecycle: [break]
+    domains: [llm-model, agentic, red-teaming]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/microsoft/PyRIT/main/LICENSE
+    maintainer: Microsoft AI Red Team
+    last_release: "1.1.0 (2026-09-04, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: PyPI classifier lists development status as Alpha; the API may change.
+
+  - id: promptfoo
+    name: Promptfoo
+    url: https://www.promptfoo.dev/
+    source: https://github.com/promptfoo/promptfoo
+    summary: CLI and library for LLM evaluations and red-team testing, usable in CI.
+    description: >-
+      Declarative evaluation and red-teaming tool for prompts, models and agents with CI/CD integration.
+      Runs locally from the open-source CLI.
+    type: Open-Source Tool
+    lifecycle: [build, break]
+    domains: [llm-model, red-teaming]
+    license: MIT
+    license_note: The maintainer also offers commercial products. Which features exist only in those offerings was not assessed here.
+    license_evidence: https://raw.githubusercontent.com/promptfoo/promptfoo/main/LICENSE
+    maintainer: Promptfoo
+    last_release: "0.121.18 (2026-07-07, from a third-party release tracker)"
+    verification: partial
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Release date came from a third-party tracker, not the GitHub releases page. Confirm which red-team features run fully offline before relying on them.
+
+  - id: deepteam
+    name: DeepTeam
+    url: https://www.trydeepteam.com/
+    source: https://github.com/confident-ai/deepteam
+    summary: Open-source LLM red-teaming framework with vulnerability and attack modules and mappings to OWASP and NIST.
+    description: >-
+      Runs locally; simulates single-turn and multi-turn attacks against LLM applications, RAG pipelines
+      and agents, and scores results with LLM-as-judge metrics. Includes optional guardrail classes.
+    type: Open-Source Tool
+    lifecycle: [break]
+    domains: [llm-model, agentic, red-teaming]
+    license: Apache-2.0
+    license_note: The maintainer sells a hosted platform (Confident AI) that integrates with it; that platform is not part of the open-source tool.
+    license_evidence: https://raw.githubusercontent.com/confident-ai/deepteam/main/LICENSE.md
+    maintainer: Confident AI
+    last_release: "1.0.10 (2026-10-16, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: The LICENSE.md appendix keeps the unfilled "[yyyy] [name of copyright owner]" template text; PyPI and the README both state Apache-2.0.
+
+  # ------------------------------------------------------------------ agent skills / MCP / discovery
+  - id: snyk-agent-scan
+    name: Snyk Agent Scan
+    url: https://github.com/snyk/agent-scan
+    source: https://github.com/snyk/agent-scan
+    summary: Discovers agent configurations, MCP servers and skills; deeper security analysis uses a Snyk-hosted API (open core).
+    description: >-
+      Command-line scanner (formerly MCP-Scan) for agent setups. The client source is Apache-2.0 and its
+      `inspect` command lists discovered components locally without analysis. Security analysis of tool
+      descriptions, skill content and MCP configs requires a Snyk API token and sends that content to a
+      hosted service governed by separate terms of use.
+    type: Open-Source Tool
+    lifecycle: [discover, build]
+    domains: [mcp-skills, supply-chain, ai-assisted-dev]
+    license: Apache-2.0
+    license_note: Client source is Apache-2.0 (LICENSE copyright "Invariant Labs AG"). Open core - the analysis service is not open source and needs a token.
+    license_evidence: https://raw.githubusercontent.com/snyk/agent-scan/main/LICENSE
+    maintainer: Snyk
+    last_release: "not verified"
+    verification: partial
+    verified_by: direct
+    verified_on: 2026-10-18
+    disclosure: Created and maintained by Snyk, which also supports the AI Security Engineers Community. Listed as open core only; the hosted analysis is a commercial dependency.
+    notes: README read on the verification date. Release cadence and LICENSE file were not re-checked in this pass. Only local discovery works without a Snyk account; compare with the fully open alternatives agent-bom and Cisco Skill Scanner.
+
+  - id: cisco-skill-scanner
+    name: Cisco AI Defense Skill Scanner
+    url: https://github.com/cisco-ai-defense/skill-scanner
+    source: https://github.com/cisco-ai-defense/skill-scanner
+    summary: Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output.
+    description: >-
+      Static scanner that inspects agent skills for prompt injection, data exfiltration and malicious code
+      patterns. Output integrates with code-scanning tools through SARIF.
+    type: Open-Source Tool
+    lifecycle: [build]
+    domains: [mcp-skills, supply-chain, ai-assisted-dev]
+    license: Apache-2.0
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/cisco-ai-defense/skill-scanner/main/LICENSE
+    maintainer: Cisco Systems (Cisco AI Defense)
+    last_release: "2026-10-15 (PyPI cisco-ai-skill-scanner)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Capability description comes from search results and release metadata; the README was not read. Check the project's security advisories before deploying.
+
+  - id: agent-bom
+    name: agent-bom
+    url: https://github.com/msaad00/agent-bom
+    source: https://github.com/msaad00/agent-bom
+    summary: Inventories local agent configs, MCP servers, skills and models, and emits CycloneDX/SPDX/SARIF.
+    description: >-
+      CLI and self-hosted dashboard that discovers agent configurations, MCP servers, skill and
+      instruction files, AI models and datasets, then maps known package vulnerabilities to them.
+    type: Open-Source Tool
+    lifecycle: [discover]
+    domains: [supply-chain, mcp-skills, governance-controls]
+    license: Apache-2.0
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/msaad00/agent-bom/main/LICENSE
+    maintainer: Individual maintainer (msaad00)
+    last_release: "v0.106.1 (27 Sep, year inferred as 2026)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Single-maintainer project with a fast release cadence; the only AI-asset discovery tool found that met the criteria.
+
+  # ------------------------------------------------------------------ supply chain
+  - id: fickling
+    name: Fickling
+    url: https://github.com/trailofbits/fickling
+    source: https://github.com/trailofbits/fickling
+    summary: Static analyzer, decompiler and safe loader hooks for Python pickle files, including PyTorch models.
+    description: >-
+      Detects malicious pickle payloads without executing them, can hook pickle loading to enforce an
+      allowlist of ML imports, and can trace, decompile and create pickle test files.
+    type: Open-Source Tool
+    lifecycle: [build, break]
+    domains: [supply-chain, llm-model]
+    license: LGPL-3.0-or-later
+    license_note: Copyleft library license; the authors offer to discuss exceptions.
+    license_evidence: https://raw.githubusercontent.com/trailofbits/fickling/master/LICENSE
+    maintainer: Trail of Bits
+    last_release: "0.1.12 (2026-06-26, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Pre-1.0 (PyPI development status Beta).
+
+  # ------------------------------------------------------------------ runtime / controls
+  - id: nemo-guardrails
+    name: NeMo Guardrails
+    url: https://github.com/NVIDIA-NeMo/Guardrails
+    source: https://github.com/NVIDIA-NeMo/Guardrails
+    summary: Toolkit for adding programmable guardrails (input, output, dialog, retrieval) to LLM applications.
+    description: >-
+      Lets developers define rails that constrain LLM application behavior and run checks on inputs,
+      outputs and retrieved content. Repository moved to the NVIDIA-NeMo organization.
+    type: Open-Source Tool
+    lifecycle: [build, defend]
+    domains: [llm-model, runtime, data-rag]
+    license: Apache-2.0
+    license_note: Per the SPDX header in LICENSE.md.
+    license_evidence: https://raw.githubusercontent.com/NVIDIA-NeMo/Guardrails/main/LICENSE.md
+    maintainer: NVIDIA
+    last_release: "0.24.1 (2026-09-16, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Guardrails are probabilistic filters and should complement, not replace, deterministic authorization.
+
+  - id: guardrails-ai
+    name: Guardrails AI
+    url: https://github.com/guardrails-ai/guardrails
+    source: https://github.com/guardrails-ai/guardrails
+    summary: Python framework for validating and structuring LLM inputs and outputs with pluggable validators.
+    description: >-
+      Applies validators to LLM inputs and outputs and can enforce structured output. Validators are
+      distributed through a separate hub.
+    type: Open-Source Tool
+    lifecycle: [defend]
+    domains: [llm-model, runtime]
+    license: Apache-2.0
+    license_note: The framework is open source; whether individual hub validators or hosted features carry other terms was not checked.
+    license_evidence: https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE
+    maintainer: Guardrails AI
+    last_release: "0.11.0 (2026-08-14, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: The LICENSE appendix keeps the unfilled copyright template text.
+
+  - id: microsoft-agent-governance-toolkit
+    name: Microsoft Agent Governance Toolkit
+    url: https://github.com/microsoft/agent-governance-toolkit
+    source: https://github.com/microsoft/agent-governance-toolkit
+    summary: Multi-language SDKs for agent policy enforcement, an MCP security gateway, agent identity and audit logging.
+    description: >-
+      Provides policy enforcement for agent actions (Cedar/OPA), an MCP gateway with tool allowlists and
+      PII/SSRF checks, agent identity, audit logging, a kill switch and OpenTelemetry/Prometheus export.
+    type: Open-Source Tool
+    lifecycle: [design, defend]
+    domains: [agentic, agent-identity, mcp-skills, runtime]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/microsoft/agent-governance-toolkit/main/LICENSE
+    maintainer: Microsoft
+    last_release: "v4.1.0 (2026-06-09, GitHub release)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Releases are labeled Public Preview and the project is roughly six months old. Its OWASP coverage claims are self-reported. No release after 2026-06-11 was seen; check for newer ones.
+
+  # ------------------------------------------------------------------ AI-assisted development
+  - id: eclipse-enclave
+    name: Eclipse Enclave
+    url: https://enclave.eclipse.dev/
+    source: https://github.com/eclipse-enclave/enclave
+    summary: Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists.
+    description: >-
+      Isolates coding agents (for example Claude Code, Codex, OpenCode) in containers with git
+      worktrees and logs and restricts outbound traffic through a domain allowlist gateway.
+    type: Open-Source Tool
+    lifecycle: [build]
+    domains: [ai-assisted-dev, agentic]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/eclipse-enclave/enclave/main/LICENSE
+    maintainer: Eclipse Foundation project (EclipseSource and contributors)
+    last_release: "rolling pre-release, 2026-10-15 (no versioned release)"
+    verification: verified
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Ships rolling builds only, so pin by commit or digest.
+
+  - id: anthropic-sandbox-runtime
+    name: sandbox-runtime
+    url: https://github.com/anthropics/sandbox-runtime
+    source: https://github.com/anthropics/sandbox-runtime
+    summary: Filesystem and network sandbox for running agent processes with restricted access.
+    description: >-
+      Lightweight sandbox for agent and tool processes that restricts filesystem and network access
+      without a container.
+    type: Open-Source Tool
+    lifecycle: [build]
+    domains: [ai-assisted-dev, agentic]
+    license: Apache-2.0
+    license_note: LICENSE was read under the project's earlier repository path, which redirects here.
+    license_evidence: https://raw.githubusercontent.com/anthropic-experimental/sandbox-runtime/main/LICENSE
+    maintainer: Anthropic
+    last_release: "v0.0.80 (2026-10-16, GitHub release)"
+    verification: partial
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: 0.0.x versioning suggests experimental status. The description comes from the repository name and release notes; the README was not read.
+
+  # ------------------------------------------------------------------ research and benchmarks
+  - id: vulnbench
+    name: Snyk VulnBench
+    url: https://vulnbench.com/
+    source: https://github.com/snyk-labs/snyk-vulnbench
+    summary: Benchmark and study of how repeatable LLM-based vulnerability findings are, versus a deterministic SAST reference.
+    description: >-
+      Repeats the same agentic security review five times per configuration on ten small JavaScript
+      projects (six model configurations, 300 scans) and compares findings with a Snyk Code reference set.
+      Published results: 134 of 158 reference-matched findings (84.8%) appeared in all five runs; 80 of 161
+      unmatched findings (49.7%) appeared in only one run. See research/vulnbench.md for methodology and limits.
+    type: Benchmark
+    lifecycle: [build, break, defend]
+    domains: [ai-assisted-dev, red-teaming]
+    license: Apache-2.0
+    license_note: Harness repository LICENSE read directly; the companion data repository snyk-labs/snyk-vulnbench-js-1.0 is also Apache-2.0 per a delegated check.
+    license_evidence: https://raw.githubusercontent.com/snyk-labs/snyk-vulnbench/main/LICENSE
+    maintainer: Snyk (snyk-labs)
+    last_release: "JS 1.0, published 2026-06-11"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    disclosure: Created by Snyk, which also supports the AI Security Engineers Community. Listed under the same criteria as every other entry.
+    notes: The reference set is Snyk Code, so "match" means agreement with that tool, not ground truth. Other projects share the name VulnBench; this entry is vulnbench.com / snyk-labs.
+
+  - id: cyberseceval
+    name: CyberSecEval (Purple Llama)
+    url: https://meta-llama.github.io/PurpleLlama/CyberSecEval/
+    source: https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks
+    summary: Meta's cybersecurity benchmark suite for LLMs, including prompt injection, insecure code and autopatch tests.
+    description: >-
+      Benchmarks covering insecure code generation, prompt injection (text and visual), code-interpreter
+      abuse, cyber-attack compliance, vulnerability exploitation, autonomous operations, AutoPatchBench
+      and CyberSOCEval.
+    type: Benchmark
+    lifecycle: [break]
+    domains: [llm-model, red-teaming, ai-assisted-dev]
+    license: MIT
+    license_note: Only the evals/benchmarks (CybersecurityBenchmarks/) and CodeShield are MIT. The repository root LICENSE is the Llama 3.2 Community License, which is NOT an open-source license; Llama Guard and Prompt Guard use Llama licenses and are not listed here. Third-party components and some datasets have separate terms.
+    license_evidence: https://raw.githubusercontent.com/meta-llama/PurpleLlama/main/README.md
+    maintainer: Meta
+    last_release: "CyberSecEval 4"
+    verification: partial
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Cite the benchmark subdirectory, not the repository root. Dataset licenses on Hugging Face were only partly checked. Meta states the benchmark infrastructure may change significantly in a next version.
+
+  - id: inspect-ai
+    name: Inspect AI
+    url: https://inspect.aisi.org.uk/
+    source: https://github.com/UKGovernmentBEIS/inspect_ai
+    summary: Framework for reproducible LLM and agent evaluations with sandboxed tool execution.
+    description: >-
+      Evaluation framework from the UK AI Security Institute used to build repeatable tests of model and
+      agent behavior, including cyber and safety evaluations.
+    type: Open-Source Tool
+    lifecycle: [break]
+    domains: [red-teaming, llm-model, agentic]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE
+    maintainer: UK AI Security Institute
+    last_release: "0.3.281 (2026-10-15, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Evaluation datasets in the separate inspect_evals repository have their own licenses.
+
+  - id: agentdojo
+    name: AgentDojo
+    url: https://agentdojo.spylab.ai/
+    source: https://github.com/ethz-spylab/agentdojo
+    summary: Dynamic benchmark environment for prompt-injection attacks and defenses against tool-using agents.
+    description: >-
+      Provides tasks, attacks and defenses to evaluate how tool-calling LLM agents resist prompt
+      injection; published at NeurIPS 2024 (Datasets and Benchmarks track), arXiv 2406.13352.
+    type: Benchmark
+    lifecycle: [break]
+    domains: [agentic, red-teaming]
+    license: MIT
+    license_note: Code license read directly. Dataset terms are not separately stated.
+    license_evidence: https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/LICENSE
+    maintainer: ETH Zurich SPY Lab
+    last_release: "0.1.35 (2025-10-27, PyPI)"
+    verification: verified
+    verified_by: direct
+    verified_on: 2026-10-18
+    notes: Last PyPI release is about a year old and the README warns the API is still developing. A research benchmark is still useful when its tasks stay fixed.
+
+  - id: mcpsecbench
+    name: MCPSecBench
+    url: https://github.com/AIS2Lab/MCPSecBench
+    source: https://github.com/AIS2Lab/MCPSecBench
+    summary: Security benchmark for Model Context Protocol servers, clients and hosts.
+    description: >-
+      Benchmark of attack scenarios against MCP deployments, intended to measure how MCP servers and
+      agents behave under adversarial conditions.
+    type: Benchmark
+    lifecycle: [break]
+    domains: [mcp-skills, red-teaming]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/AIS2Lab/MCPSecBench/main/LICENSE
+    maintainer: AIS2Lab
+    last_release: "not verified"
+    verification: partial
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: License was read; maintenance recency and the accompanying paper were not verified. Treat as research code.
+
+  - id: cybench
+    name: Cybench
+    url: https://cybench.github.io/
+    source: https://github.com/andyzorigin/cybench
+    summary: CTF-based benchmark of 40 tasks for evaluating the offensive cyber capabilities of LLM agents.
+    description: >-
+      Framework and task set drawn from professional-level capture-the-flag competitions to measure
+      whether language-model agents can solve security tasks (arXiv 2408.08926).
+    type: Benchmark
+    lifecycle: [break]
+    domains: [red-teaming, agentic]
+    license: Apache-2.0
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/andyzorigin/cybench/main/LICENSE
+    maintainer: Stanford
+    last_release: "not verified"
+    verification: partial
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Measures model capability for offense; useful for evaluating the AI-powered attacker side of the threat model.
+
+  # ------------------------------------------------------------------ learning
+  - id: owasp-finbot-ctf
+    name: OWASP FinBot Agentic AI CTF
+    url: https://genai.owasp.org/resource/finbot-agentic-ai-capture-the-flag-ctf-application/
+    source: https://github.com/OWASP-ASI/finbot-ctf-demo
+    summary: Multi-agent financial-services app with agentic attack challenges (goal manipulation, prompt injection).
+    description: >-
+      Capture-the-flag application built on a vendor-onboarding multi-agent workflow for practicing attacks
+      on agentic systems. Can be run locally; OWASP also announced a hosted instance in April 2026.
+    type: Learning / Lab
+    lifecycle: [break]
+    domains: [agentic, red-teaming]
+    license: Apache-2.0
+    license_note: License file is LICENSE.md in the demo repository.
+    license_evidence: https://raw.githubusercontent.com/OWASP-ASI/finbot-ctf-demo/main/LICENSE.md
+    maintainer: OWASP GenAI Security Project (Agentic Security Initiative)
+    last_release: "no tagged releases; OWASP announced availability 2026-04-14"
+    verification: partial
+    verified_by: delegated
+    verified_on: 2026-10-18
+    notes: Last commit date was not verified and a newer repository may supersede the demo repo. Recheck before relying on it.

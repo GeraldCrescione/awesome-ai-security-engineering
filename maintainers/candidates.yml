@@ -1,0 +1,238 @@
+# Candidates that were evaluated but are NOT in the public list.
+# decision: exclude  = fails an eligibility rule (see reason)
+#           hold     = may qualify later; needs a fact, a maintainer decision, or more track record
+#           backlog  = verified and qualifying, deferred to keep the first release curated (<= 30)
+# checked_on is the date the evidence below was gathered.
+
+candidates:
+
+  - name: LLM Guard
+    url: https://github.com/protectai/llm-guard
+    license_found: MIT
+    decision: exclude
+    reason: Repository archived by its owner on 2026-07-09; README states it is no longer maintained.
+    evidence: https://github.com/protectai/llm-guard
+    checked_on: 2026-10-18
+
+  - name: Meta Purple Llama (repository as a whole)
+    url: https://github.com/meta-llama/PurpleLlama
+    license_found: Llama 3.2 Community License at repository root; MIT for CybersecurityBenchmarks and CodeShield
+    decision: exclude
+    reason: >-
+      Repository root is not an OSI-approved license. Only the CyberSecEval benchmark component is listed
+      (see resources.yml). Llama Guard and Prompt Guard are models under Llama licenses and are not listed.
+    evidence: https://raw.githubusercontent.com/meta-llama/PurpleLlama/main/LICENSE ; https://raw.githubusercontent.com/meta-llama/PurpleLlama/main/README.md
+    checked_on: 2026-10-18
+
+  - name: NIST AI Risk Management Framework (AI RMF 1.0, AI 600-1)
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    license_found: Not verified (voluntary guidance; US government publication)
+    decision: exclude
+    reason: >-
+      Risk-governance guidance without an open repository or implementable specification; NIST states a
+      revision is under way. Does not meet the open-standard bar in the project criteria. Referenced as
+      context in foundations/frameworks-and-standards.md rather than listed.
+    evidence: https://www.nist.gov/itl/ai-risk-management-framework
+    checked_on: 2026-10-18
+
+  - name: Giskard
+    url: https://github.com/Giskard-AI/giskard
+    license_found: Apache-2.0
+    decision: hold
+    reason: >-
+      Library is Apache-2.0 and active (3.0.1 released 2026-10-02) but the security-testing functionality
+      that is open source in v3 was not verified; the vendor also offers a commercial hub.
+    evidence: https://raw.githubusercontent.com/Giskard-AI/giskard/main/LICENSE ; https://pypi.org/project/giskard/
+    checked_on: 2026-10-18
+
+  - name: Agent Security Bench (ASB)
+    url: https://github.com/agiresearch/ASB
+    license_found: MIT
+    decision: hold
+    reason: Qualifies as research (ICLR 2025, arXiv 2410.02644) but maintenance could not be verified and the README clone URL points to a different organization.
+    evidence: https://raw.githubusercontent.com/agiresearch/ASB/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: Adversarial Robustness Toolbox (ART)
+    url: https://github.com/Trusted-AI/adversarial-robustness-toolbox
+    license_found: MIT
+    decision: hold
+    reason: Relevant to classical adversarial ML; latest PyPI release 1.20.1 is dated 2025-07-07, more than 12 months old. Recheck repository activity.
+    evidence: https://raw.githubusercontent.com/Trusted-AI/adversarial-robustness-toolbox/main/LICENSE ; https://pypi.org/project/adversarial-robustness-toolbox/
+    checked_on: 2026-10-18
+
+  - name: OWASP Juice Shop
+    url: https://github.com/juice-shop/juice-shop
+    license_found: MIT
+    decision: exclude
+    reason: Qualifies on license and maintenance but is a general web AppSec training target, not AI-specific.
+    evidence: https://raw.githubusercontent.com/juice-shop/juice-shop/master/LICENSE
+    checked_on: 2026-10-18
+
+  - name: Damn Vulnerable MCP Server
+    url: https://github.com/harishsg993010/damn-vulnerable-MCP-server
+    license_found: README claims MIT; no LICENSE file confirmed
+    decision: hold
+    reason: Popular MCP challenge lab, but a README-only license claim fails the verification rule. Recheck for a LICENSE file.
+    evidence: https://github.com/harishsg993010/damn-vulnerable-MCP-server
+    checked_on: 2026-10-18
+
+  - name: InjecAgent
+    url: https://github.com/uiuc-kang-lab/InjecAgent
+    license_found: none found
+    decision: hold
+    reason: No LICENSE file found at the default branch.
+    evidence: https://github.com/uiuc-kang-lab/InjecAgent
+    checked_on: 2026-10-18
+
+  - name: MCP-SafetyBench
+    url: https://github.com/xjzzzzzzzz/MCPSafety
+    license_found: none found
+    decision: hold
+    reason: No LICENSE file found at the default branch (ICLR 2026 paper, arXiv 2512.15163).
+    evidence: https://arxiv.org/pdf/2512.15163v1
+    checked_on: 2026-10-18
+
+  - name: MCPTox
+    url: not found
+    license_found: n/a
+    decision: exclude
+    reason: No public repository or license was found.
+    evidence: ""
+    checked_on: 2026-10-18
+
+  - name: CyberGym
+    url: https://github.com/sunblaze-ucb/cybergym
+    license_found: Apache-2.0 (code, per README); dataset license not verified
+    decision: backlog
+    reason: Qualifying vulnerability-reproduction benchmark (arXiv 2506.02548). Deferred; roughly 240 GB of data and dataset license unverified.
+    evidence: https://github.com/sunblaze-ucb/cybergym
+    checked_on: 2026-10-18
+
+  - name: BountyBench
+    url: https://github.com/bountybench/bountybench
+    license_found: Apache-2.0
+    decision: backlog
+    reason: Qualifying detect/exploit/patch evaluation on real systems; paper not verified. Deferred to keep the first list curated.
+    evidence: https://raw.githubusercontent.com/bountybench/bountybench/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: CVE-Bench
+    url: https://github.com/uiuc-kang-lab/cve-bench
+    license_found: Apache-2.0
+    decision: backlog
+    reason: Qualifying benchmark for agent exploitation of real web-application CVEs (arXiv 2503.17332). Deferred.
+    evidence: https://raw.githubusercontent.com/uiuc-kang-lab/cve-bench/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: inspect_evals
+    url: https://github.com/UKGovernmentBEIS/inspect_evals
+    license_found: MIT (per-eval dataset licenses vary)
+    decision: backlog
+    reason: Collection of evaluations on Inspect AI; dataset licenses are per evaluation and were not audited.
+    evidence: https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_evals/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: Caracal
+    url: https://github.com/Garudex-Labs/caracal
+    license_found: Apache-2.0
+    decision: hold
+    reason: Authority layer for agents (policy-based authorization, delegation, revocation, approvals). Version 1.0.0 only since 2026-08-09; needs more track record.
+    evidence: https://raw.githubusercontent.com/Garudex-Labs/caracal/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: ZeroID
+    url: https://github.com/highflame-ai/zeroid
+    license_found: Apache-2.0
+    decision: hold
+    reason: Agent identity server (OAuth 2.1, token exchange). Vendor-maintained; open-core boundary and competitor status not assessed.
+    evidence: https://raw.githubusercontent.com/highflame-ai/zeroid/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: agentgateway
+    url: https://github.com/agentgateway/agentgateway
+    license_found: Apache-2.0 (copyright Solo.io, Inc.)
+    decision: hold
+    reason: Proxy for agent, MCP and LLM traffic. Policy and authorization features were described only in search snippets; README not read.
+    evidence: https://raw.githubusercontent.com/agentgateway/agentgateway/main/LICENSE
+    checked_on: 2026-10-18
+
+  - name: Cisco mcp-scanner
+    url: https://github.com/cisco-ai-defense/mcp-scanner
+    license_found: not verified
+    decision: hold
+    reason: Named in search results; license and release date were not fetched.
+    evidence: ""
+    checked_on: 2026-10-18
+
+  - name: SPIFFE / SPIRE
+    url: https://spiffe.io/
+    license_found: not verified (CNCF graduated)
+    decision: hold
+    reason: Workload identity primitive rather than an AI-specific resource; license file not read.
+    evidence: https://github.com/spiffe/spire
+    checked_on: 2026-10-18
+
+  - name: Sigstore cosign
+    url: https://github.com/sigstore/cosign
+    license_found: not verified
+    decision: hold
+    reason: Artifact signing tool; LICENSE file not read. The AI-specific model-signing project is listed instead.
+    evidence: https://github.com/sigstore/cosign
+    checked_on: 2026-10-18
+
+  - name: CoSAI Risk Map (secure-ai-tooling)
+    url: https://github.com/cosai-oasis/secure-ai-tooling
+    license_found: Apache-2.0 (code and risk-map YAML, per README)
+    decision: backlog
+    reason: Qualifying risk/controls map that cross-references ATLAS, NIST AI RMF and the OWASP LLM Top 10. Deferred; LICENSE file not read.
+    evidence: https://github.com/cosai-oasis/secure-ai-tooling
+    checked_on: 2026-10-18
+
+  - name: OWASP Agent Control Standard (ACS)
+    url: https://genai.owasp.org/resource/agent-control-standard-acs/
+    license_found: Apache-2.0 (code), CC BY-SA 4.0 (docs), per README
+    decision: hold
+    reason: v0.1 public preview published 2026-09-01; revisit when a stable version exists.
+    evidence: https://github.com/GenAI-Security-Project/agent-control-standard
+    checked_on: 2026-10-18
+
+  - name: IETF draft-ietf-wimse-aims (AI Identity Management System)
+    url: https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/
+    license_found: IETF Trust terms
+    decision: hold
+    reason: Internet-Draft only; no RFC status. Revisit when published.
+    evidence: https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/
+    checked_on: 2026-10-18
+
+  - name: OWASP AIVSS and AI Testing Guide
+    url: https://owasp.org/www-project-ai-testing-guide/
+    license_found: not verified
+    decision: hold
+    reason: AIVSS is pre-1.0 (v0.8); the AI Testing Guide license was not verified.
+    evidence: https://owasp.org/www-project-ai-testing-guide/
+    checked_on: 2026-10-18
+
+  - name: Aigis, AgentGate, SkillScan, Vigilante
+    url: ""
+    license_found: not verified
+    decision: exclude
+    reason: Seen only in search results; maintainer, license file and maintenance could not be verified.
+    evidence: ""
+    checked_on: 2026-10-18
+
+  - name: disler/agent-sandbox-skill
+    url: https://github.com/disler/agent-sandbox-skill
+    license_found: not verified
+    decision: exclude
+    reason: Search results show the last push on 2025-11-29, more than 12 months before the verification date.
+    evidence: ""
+    checked_on: 2026-10-18
+
+  - name: Snyk Learn, aisecurity.engineer training
+    url: https://learn.snyk.io/
+    license_found: proprietary (free training content)
+    decision: exclude
+    reason: Free training, not open-source software, standard or research artifact. Community training content can be added to learning/ only if openly licensed.
+    evidence: ""
+    checked_on: 2026-10-18
