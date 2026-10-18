@@ -3,7 +3,7 @@
 The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), grouped by technical domain. A resource can appear under several domains. Domains with no entry are known gaps, not oversights; see [CONTRIBUTING.md](../CONTRIBUTING.md) to propose a resource.
 
 <!-- BEGIN GENERATED: topics -->
-### AI-Assisted Development Security
+## AI-Assisted Development Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -14,7 +14,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Snyk Agent Scan](../resources/README.md#snyk-agent-scan) | Discovers agent configurations, MCP servers and skills; deeper security analysis uses a Snyk-hosted API (open core). | Discover, Build |
 | [Snyk VulnBench](../resources/README.md#snyk-vulnbench) | Benchmark and study of how repeatable LLM-based vulnerability findings are, versus a deterministic SAST reference. | Build, Break, Defend |
 
-### LLM and Model Security
+## LLM and Model Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -30,7 +30,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Promptfoo](../resources/README.md#promptfoo) | CLI and library for LLM evaluations and red-team testing, usable in CI. | Build, Break |
 | [PyRIT](../resources/README.md#pyrit) | Python framework for automated and human-assisted red teaming of generative AI systems. | Break |
 
-### Agentic AI Security
+## Agentic AI Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -49,7 +49,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [PyRIT](../resources/README.md#pyrit) | Python framework for automated and human-assisted red teaming of generative AI systems. | Break |
 | [sandbox-runtime](../resources/README.md#sandbox-runtime) | Filesystem and network sandbox for running agent processes with restricted access. | Build |
 
-### MCP and Agent Skills Security
+## MCP and Agent Skills Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -61,7 +61,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Model Context Protocol (MCP)](../resources/README.md#model-context-protocol-mcp) | Open protocol connecting AI applications to tools and data, with an OAuth-based authorization model. | Design, Build |
 | [Snyk Agent Scan](../resources/README.md#snyk-agent-scan) | Discovers agent configurations, MCP servers and skills; deeper security analysis uses a Snyk-hosted API (open core). | Discover, Build |
 
-### AI Supply Chain Security
+## AI Supply Chain Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -72,7 +72,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Sigstore model-transparency (model-signing)](../resources/README.md#sigstore-model-transparency-model-signing) | Python library and CLI for signing and verifying ML model artifacts with Sigstore. | Build |
 | [Snyk Agent Scan](../resources/README.md#snyk-agent-scan) | Discovers agent configurations, MCP servers and skills; deeper security analysis uses a Snyk-hosted API (open core). | Discover, Build |
 
-### Agent Identity and Access
+## Agent Identity and Access
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -82,13 +82,13 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Open Policy Agent (OPA)](../resources/README.md#open-policy-agent-opa) | General-purpose policy engine (Rego) for deterministic authorization and policy-as-code. | Design, Defend |
 | [OWASP Top 10 for Agentic Applications 2026](../resources/README.md#owasp-top-10-for-agentic-applications-2026) | Peer-reviewed list of the ten most critical risks for autonomous, tool-using AI agents. | Design, Break |
 
-### Data and RAG Security
+## Data and RAG Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
 | [NeMo Guardrails](../resources/README.md#nemo-guardrails) | Toolkit for adding programmable guardrails (input, output, dialog, retrieval) to LLM applications. | Build, Defend |
 
-### AI Red Teaming and Evaluations
+## AI Red Teaming and Evaluations
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -104,7 +104,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [PyRIT](../resources/README.md#pyrit) | Python framework for automated and human-assisted red teaming of generative AI systems. | Break |
 | [Snyk VulnBench](../resources/README.md#snyk-vulnbench) | Benchmark and study of how repeatable LLM-based vulnerability findings are, versus a deterministic SAST reference. | Build, Break, Defend |
 
-### AI Runtime Security
+## AI Runtime Security
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
@@ -114,7 +114,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [Open Policy Agent (OPA)](../resources/README.md#open-policy-agent-opa) | General-purpose policy engine (Rego) for deterministic authorization and policy-as-code. | Design, Defend |
 | [OpenTelemetry GenAI Semantic Conventions](../resources/README.md#opentelemetry-genai-semantic-conventions) | Vendor-neutral span, metric and attribute conventions for tracing GenAI calls, agents and tool use. | Defend |
 
-### AI Security Governance and Engineering Controls
+## AI Security Governance and Engineering Controls
 
 | Resource | What it is | Lifecycle |
 |---|---|---|

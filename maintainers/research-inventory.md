@@ -5,7 +5,7 @@ Every candidate evaluated for the first release, with the decision and evidence.
 All checks were made on 2026-10-18. "Verification: direct" means the primary source (LICENSE file or official page) was read in a maintainer-run pass; "delegated" means a separate research pass read it and a human spot-check is recommended. Dates marked "year inferred" came from pages that show only day and month.
 
 <!-- BEGIN GENERATED: inventory -->
-#### Published
+## Published
 
 | Name | Type | License | Maintainer | Latest release evidence | Verification | Date | License evidence |
 |---|---|---|---|---|---|---|---|
@@ -39,7 +39,7 @@ All checks were made on 2026-10-18. "Verification: direct" means the primary sou
 | Snyk Agent Scan | Open-Source Tool | Apache-2.0 | Snyk | not verified | partial / direct | 2026-10-18 | <https://raw.githubusercontent.com/snyk/agent-scan/main/LICENSE> |
 | Snyk VulnBench | Benchmark | Apache-2.0 | Snyk (snyk-labs) | JS 1.0, published 2026-06-11 | verified / direct | 2026-10-18 | <https://raw.githubusercontent.com/snyk-labs/snyk-vulnbench/main/LICENSE> |
 
-#### Excluded
+## Excluded
 
 | Candidate | License found | Reason | Evidence | Checked |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ All checks were made on 2026-10-18. "Verification: direct" means the primary sou
 | disler/agent-sandbox-skill | not verified | Search results show the last push on 2025-11-29, more than 12 months before the verification date. |  | 2026-10-18 |
 | Snyk Learn, aisecurity.engineer training | proprietary (free training content) | Free training, not open-source software, standard or research artifact. Community training content can be added to learning/ only if openly licensed. |  | 2026-10-18 |
 
-#### On hold
+## On hold
 
 | Candidate | License found | Reason | Evidence | Checked |
 |---|---|---|---|---|
@@ -72,7 +72,7 @@ All checks were made on 2026-10-18. "Verification: direct" means the primary sou
 | IETF draft-ietf-wimse-aims (AI Identity Management System) | IETF Trust terms | Internet-Draft only; no RFC status. Revisit when published. | <https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/> | 2026-10-18 |
 | OWASP AIVSS and AI Testing Guide | not verified | AIVSS is pre-1.0 (v0.8); the AI Testing Guide license was not verified. | <https://owasp.org/www-project-ai-testing-guide/> | 2026-10-18 |
 
-#### Verified, deferred (backlog)
+## Verified, deferred (backlog)
 
 | Candidate | License found | Reason | Evidence | Checked |
 |---|---|---|---|---|

@@ -79,7 +79,7 @@ def block_topics(rs: list[dict]) -> str:
     parts = []
     for key, label in DOMAINS.items():
         items = by_name([r for r in rs if key in r["domains"]])
-        parts.append(f"### {label}\n")
+        parts.append(f"## {label}\n")
         if not items:
             parts.append("No resource has passed verification for this domain yet. "
                          "This is a known gap; see [CONTRIBUTING.md](../CONTRIBUTING.md) to propose one.\n")
@@ -96,7 +96,7 @@ def block_catalogue(rs: list[dict]) -> str:
     for r in by_name(rs):
         lic = r["license"]
         lines = [
-            f"### {r['name']}",
+            f"## {r['name']}",
             "",
             r["description"].strip(),
             "",
@@ -131,7 +131,7 @@ def block_types(rs: list[dict], types: list[str], prefix: str = "../") -> str:
 
 def block_inventory(rs: list[dict]) -> str:
     cands = load_candidates()
-    out = ["#### Published", ""]
+    out = ["## Published", ""]
     out.append(table(
         [[r["name"], r["type"], short_license(r), r["maintainer"], r["last_release"],
           f"{r['verification']} / {r['verified_by']}", r["verified_on"], f"<{r['license_evidence']}>"]
@@ -140,7 +140,7 @@ def block_inventory(rs: list[dict]) -> str:
     ))
     for decision, title in (("exclude", "Excluded"), ("hold", "On hold"), ("backlog", "Verified, deferred (backlog)")):
         items = [c for c in cands if c["decision"] == decision]
-        out += ["", f"#### {title}", ""]
+        out += ["", f"## {title}", ""]
         out.append(table(
             [[c["name"], c.get("license_found", ""), c["reason"].strip(),
               (f"<{c['evidence'].split(' ; ')[0]}>" if c.get("evidence") else ""), str(c["checked_on"])]

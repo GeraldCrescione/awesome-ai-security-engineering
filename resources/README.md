@@ -9,7 +9,7 @@ How to read an entry:
 - **Verification** is `verified` when license and release evidence were both checked, or `partial` when something is noted as unconfirmed. A `direct` check was done from the primary source by a maintainer-run pass; `delegated` means a separate research pass read the primary source and a human spot-check is welcome.
 
 <!-- BEGIN GENERATED: catalogue -->
-### agent-bom
+## agent-bom
 
 CLI and self-hosted dashboard that discovers agent configurations, MCP servers, skill and instruction files, AI models and datasets, then maps known package vulnerabilities to them.
 
@@ -24,7 +24,7 @@ CLI and self-hosted dashboard that discovers agent configurations, MCP servers, 
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/msaad00/agent-bom/main/LICENSE>
 - **Notes:** Single-maintainer project with a fast release cadence; the only AI-asset discovery tool found that met the criteria.
 
-### AgentDojo
+## AgentDojo
 
 Provides tasks, attacks and defenses to evaluate how tool-calling LLM agents resist prompt injection; published at NeurIPS 2024 (Datasets and Benchmarks track), arXiv 2406.13352.
 
@@ -39,7 +39,7 @@ Provides tasks, attacks and defenses to evaluate how tool-calling LLM agents res
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/LICENSE>
 - **Notes:** Last PyPI release is about a year old and the README warns the API is still developing. A research benchmark is still useful when its tasks stay fixed.
 
-### Cisco AI Defense Skill Scanner
+## Cisco AI Defense Skill Scanner
 
 Static scanner that inspects agent skills for prompt injection, data exfiltration and malicious code patterns. Output integrates with code-scanning tools through SARIF.
 
@@ -54,7 +54,7 @@ Static scanner that inspects agent skills for prompt injection, data exfiltratio
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/cisco-ai-defense/skill-scanner/main/LICENSE>
 - **Notes:** Capability description comes from search results and release metadata; the README was not read. Check the project's security advisories before deploying.
 
-### CoSAI Secure Design Patterns for Agentic Systems
+## CoSAI Secure Design Patterns for Agentic Systems
 
 Coalition for Secure AI (an OASIS Open Project) workstream 4 repository with whitepapers on MCP security and agentic identity and access management, plus design-pattern content for secure agentic systems.
 
@@ -69,7 +69,7 @@ Coalition for Secure AI (an OASIS Open Project) workstream 4 repository with whi
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/cosai-oasis/ws4-secure-design-agentic-systems/main/LICENSE.md>
 - **Notes:** Reference content (papers and patterns), not deployable code.
 
-### Cybench
+## Cybench
 
 Framework and task set drawn from professional-level capture-the-flag competitions to measure whether language-model agents can solve security tasks (arXiv 2408.08926).
 
@@ -84,7 +84,7 @@ Framework and task set drawn from professional-level capture-the-flag competitio
 - **Verification:** partial (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/andyzorigin/cybench/main/LICENSE>
 - **Notes:** Measures model capability for offense; useful for evaluating the AI-powered attacker side of the threat model.
 
-### CyberSecEval (Purple Llama)
+## CyberSecEval (Purple Llama)
 
 Benchmarks covering insecure code generation, prompt injection (text and visual), code-interpreter abuse, cyber-attack compliance, vulnerability exploitation, autonomous operations, AutoPatchBench and CyberSOCEval.
 
@@ -99,7 +99,7 @@ Benchmarks covering insecure code generation, prompt injection (text and visual)
 - **Verification:** partial (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/meta-llama/PurpleLlama/main/README.md>
 - **Notes:** Cite the benchmark subdirectory, not the repository root. Dataset licenses on Hugging Face were only partly checked. Meta states the benchmark infrastructure may change significantly in a next version.
 
-### CycloneDX
+## CycloneDX
 
 Full-stack BOM specification for software, services and ML components. Its ML-BOM capability lets teams inventory models and datasets alongside code dependencies; the format is standardized as ECMA-424.
 
@@ -114,7 +114,7 @@ Full-stack BOM specification for software, services and ML components. Its ML-BO
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/CycloneDX/specification/master/README.md>
 - **Notes:** Which spec version introduced ML-BOM was not confirmed; check the spec history before citing it.
 
-### DeepTeam
+## DeepTeam
 
 Runs locally; simulates single-turn and multi-turn attacks against LLM applications, RAG pipelines and agents, and scores results with LLM-as-judge metrics. Includes optional guardrail classes.
 
@@ -129,7 +129,7 @@ Runs locally; simulates single-turn and multi-turn attacks against LLM applicati
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/confident-ai/deepteam/main/LICENSE.md>
 - **Notes:** The LICENSE.md appendix keeps the unfilled "[yyyy] [name of copyright owner]" template text; PyPI and the README both state Apache-2.0.
 
-### Eclipse Enclave
+## Eclipse Enclave
 
 Isolates coding agents (for example Claude Code, Codex, OpenCode) in containers with git worktrees and logs and restricts outbound traffic through a domain allowlist gateway.
 
@@ -144,7 +144,7 @@ Isolates coding agents (for example Claude Code, Codex, OpenCode) in containers 
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/eclipse-enclave/enclave/main/LICENSE>
 - **Notes:** Ships rolling builds only, so pin by commit or digest.
 
-### Fickling
+## Fickling
 
 Detects malicious pickle payloads without executing them, can hook pickle loading to enforce an allowlist of ML imports, and can trace, decompile and create pickle test files.
 
@@ -159,7 +159,7 @@ Detects malicious pickle payloads without executing them, can hook pickle loadin
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/trailofbits/fickling/master/LICENSE>
 - **Notes:** Pre-1.0 (PyPI development status Beta).
 
-### garak
+## garak
 
 Command-line scanner that runs probes (prompt injection, jailbreaks, data leakage and others) against an LLM endpoint and evaluates the responses with detectors.
 
@@ -174,7 +174,7 @@ Command-line scanner that runs probes (prompt injection, jailbreaks, data leakag
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/NVIDIA/garak/main/LICENSE>
 - **Notes:** Scan results are probabilistic; repeat runs before drawing conclusions.
 
-### Guardrails AI
+## Guardrails AI
 
 Applies validators to LLM inputs and outputs and can enforce structured output. Validators are distributed through a separate hub.
 
@@ -189,7 +189,7 @@ Applies validators to LLM inputs and outputs and can enforce structured output. 
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE>
 - **Notes:** The LICENSE appendix keeps the unfilled copyright template text.
 
-### Inspect AI
+## Inspect AI
 
 Evaluation framework from the UK AI Security Institute used to build repeatable tests of model and agent behavior, including cyber and safety evaluations.
 
@@ -204,7 +204,7 @@ Evaluation framework from the UK AI Security Institute used to build repeatable 
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE>
 - **Notes:** Evaluation datasets in the separate inspect_evals repository have their own licenses.
 
-### MCPSecBench
+## MCPSecBench
 
 Benchmark of attack scenarios against MCP deployments, intended to measure how MCP servers and agents behave under adversarial conditions.
 
@@ -219,7 +219,7 @@ Benchmark of attack scenarios against MCP deployments, intended to measure how M
 - **Verification:** partial (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/AIS2Lab/MCPSecBench/main/LICENSE>
 - **Notes:** License was read; maintenance recency and the accompanying paper were not verified. Treat as research code.
 
-### Microsoft Agent Governance Toolkit
+## Microsoft Agent Governance Toolkit
 
 Provides policy enforcement for agent actions (Cedar/OPA), an MCP gateway with tool allowlists and PII/SSRF checks, agent identity, audit logging, a kill switch and OpenTelemetry/Prometheus export.
 
@@ -234,7 +234,7 @@ Provides policy enforcement for agent actions (Cedar/OPA), an MCP gateway with t
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/microsoft/agent-governance-toolkit/main/LICENSE>
 - **Notes:** Releases are labeled Public Preview and the project is roughly six months old. Its OWASP coverage claims are self-reported. No release after 2026-06-11 was seen; check for newer ones.
 
-### MITRE ATLAS
+## MITRE ATLAS
 
 Matrix of tactics, techniques, mitigations and real-world case studies for attacks on AI systems, distributed as YAML and STIX data with Navigator support. Modeled on MITRE ATT&CK.
 
@@ -249,7 +249,7 @@ Matrix of tactics, techniques, mitigations and real-world case studies for attac
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://github.com/mitre-atlas/atlas-data>
 - **Notes:** Single-organization governance. Contributions arrive through GitHub.
 
-### Model Context Protocol (MCP)
+## Model Context Protocol (MCP)
 
 Client/server protocol for exposing tools, resources and prompts to AI applications. The specification includes an authorization section and security considerations that define trust boundaries between hosts, clients and servers. Current spec revision found: 2026-07-28.
 
@@ -264,7 +264,7 @@ Client/server protocol for exposing tools, resources and prompts to AI applicati
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/LICENSE>
 - **Notes:** Maintainer-led governance (SEP process). A protocol, not a security control; its security model is only as good as each implementation.
 
-### NeMo Guardrails
+## NeMo Guardrails
 
 Lets developers define rails that constrain LLM application behavior and run checks on inputs, outputs and retrieved content. Repository moved to the NVIDIA-NeMo organization.
 
@@ -279,7 +279,7 @@ Lets developers define rails that constrain LLM application behavior and run che
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/NVIDIA-NeMo/Guardrails/main/LICENSE.md>
 - **Notes:** Guardrails are probabilistic filters and should complement, not replace, deterministic authorization.
 
-### Open Policy Agent (OPA)
+## Open Policy Agent (OPA)
 
 CNCF graduated policy engine used to express and enforce authorization and guardrail rules as code. Not AI-specific; included as the deterministic control layer that AI agents' tool permissions can be checked against.
 
@@ -294,7 +294,7 @@ CNCF graduated policy engine used to express and enforce authorization and guard
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://github.com/open-policy-agent/opa>
 - **Notes:** Foundational security tool rather than an AI tool. Stewardship changed in 2025-2026; review the project's own statement.
 
-### OpenTelemetry GenAI Semantic Conventions
+## OpenTelemetry GenAI Semantic Conventions
 
 Standard attribute and span definitions (for example agent invocation and tool-call spans) so that agent activity can be traced with ordinary OpenTelemetry pipelines. Provides the telemetry that runtime monitoring and incident investigation depend on.
 
@@ -309,7 +309,7 @@ Standard attribute and span definitions (for example agent invocation and tool-c
 - **Verification:** partial (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/open-telemetry/semantic-conventions/main/LICENSE>
 - **Notes:** Maturity (stable vs. development) of the GenAI conventions was not confirmed. It is an observability standard, not a security control.
 
-### OWASP FinBot Agentic AI CTF
+## OWASP FinBot Agentic AI CTF
 
 Capture-the-flag application built on a vendor-onboarding multi-agent workflow for practicing attacks on agentic systems. Can be run locally; OWASP also announced a hosted instance in April 2026.
 
@@ -324,7 +324,7 @@ Capture-the-flag application built on a vendor-onboarding multi-agent workflow f
 - **Verification:** partial (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/OWASP-ASI/finbot-ctf-demo/main/LICENSE.md>
 - **Notes:** Last commit date was not verified and a newer repository may supersede the demo repo. Recheck before relying on it.
 
-### OWASP GenAI Security Project
+## OWASP GenAI Security Project
 
 OWASP project that publishes the LLM Top 10 (2025 edition and a 2026 edition), the Top 10 for Agentic Applications, cheat sheets, an AI red-teaming initiative and other guidance. Useful as the shared vocabulary for AI-specific risks.
 
@@ -339,7 +339,7 @@ OWASP project that publishes the LLM Top 10 (2025 edition and a 2026 edition), t
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/>
 - **Notes:** Guidance documents, not software. Check the license of each individual artifact before reuse.
 
-### OWASP Top 10 for Agentic Applications 2026
+## OWASP Top 10 for Agentic Applications 2026
 
 Risk list for AI agents that plan, act and make decisions across workflows, such as goal hijack, tool misuse and identity abuse. The project page states it was developed with more than 100 industry experts, researchers and practitioners and was published on 2025-12-09.
 
@@ -354,7 +354,7 @@ Risk list for AI agents that plan, act and make decisions across workflows, such
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/>
 - **Notes:** A risk taxonomy, not a control catalogue. Treat it as a threat-modeling input.
 
-### Promptfoo
+## Promptfoo
 
 Declarative evaluation and red-teaming tool for prompts, models and agents with CI/CD integration. Runs locally from the open-source CLI.
 
@@ -369,7 +369,7 @@ Declarative evaluation and red-teaming tool for prompts, models and agents with 
 - **Verification:** partial (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/promptfoo/promptfoo/main/LICENSE>
 - **Notes:** Release date came from a third-party tracker, not the GitHub releases page. Confirm which red-team features run fully offline before relying on them.
 
-### PyRIT
+## PyRIT
 
 Library from the Microsoft AI Red Team that orchestrates attacks, converters, targets and scoring to identify risks in generative AI systems.
 
@@ -384,7 +384,7 @@ Library from the Microsoft AI Red Team that orchestrates attacks, converters, ta
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/microsoft/PyRIT/main/LICENSE>
 - **Notes:** PyPI classifier lists development status as Alpha; the API may change.
 
-### sandbox-runtime
+## sandbox-runtime
 
 Lightweight sandbox for agent and tool processes that restricts filesystem and network access without a container.
 
@@ -399,7 +399,7 @@ Lightweight sandbox for agent and tool processes that restricts filesystem and n
 - **Verification:** partial (delegated check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/anthropic-experimental/sandbox-runtime/main/LICENSE>
 - **Notes:** 0.0.x versioning suggests experimental status. The description comes from the repository name and release notes; the README was not read.
 
-### Sigstore model-transparency (model-signing)
+## Sigstore model-transparency (model-signing)
 
 Signs and verifies model files so consumers can check integrity and provenance before loading them. Supports Sigstore keyless signing as well as key- and certificate-based signing, with in-toto/DSSE bundles.
 
@@ -414,7 +414,7 @@ Signs and verifies model files so consumers can check integrity and provenance b
 - **Verification:** verified (delegated check, 2026-10-18); license evidence: <https://github.com/sigstore/model-transparency>
 - **Notes:** Signing proves who published a model, not that the model is safe.
 
-### Snyk Agent Scan
+## Snyk Agent Scan
 
 Command-line scanner (formerly MCP-Scan) for agent setups. The client source is Apache-2.0 and its `inspect` command lists discovered components locally without analysis. Security analysis of tool descriptions, skill content and MCP configs requires a Snyk API token and sends that content to a hosted service governed by separate terms of use.
 
@@ -430,7 +430,7 @@ Command-line scanner (formerly MCP-Scan) for agent setups. The client source is 
 - **Disclosure:** Created and maintained by Snyk, which also supports the AI Security Engineers Community. Listed as open core only; the hosted analysis is a commercial dependency.
 - **Notes:** README read on the verification date. Release cadence and LICENSE file were not re-checked in this pass. Only local discovery works without a Snyk account; compare with the fully open alternatives agent-bom and Cisco Skill Scanner.
 
-### Snyk VulnBench
+## Snyk VulnBench
 
 Repeats the same agentic security review five times per configuration on ten small JavaScript projects (six model configurations, 300 scans) and compares findings with a Snyk Code reference set. Published results: 134 of 158 reference-matched findings (84.8%) appeared in all five runs; 80 of 161 unmatched findings (49.7%) appeared in only one run. See research/vulnbench.md for methodology and limits.
 
