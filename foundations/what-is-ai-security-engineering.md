@@ -51,6 +51,7 @@ DevOps followed a recognizable path: new practices appear, responsibilities frag
 
 ## Next
 
+- [Foundations: initial vision ](initial-vision.md)
 - [Responsibilities and skills](responsibilities.md)
 - [Frameworks and standards](frameworks-and-standards.md)
 - [The five-stage lifecycle](../lifecycle/discover.md)
