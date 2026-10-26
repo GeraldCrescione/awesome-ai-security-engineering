@@ -637,3 +637,27 @@ resources:
     verified_by: delegated
     verified_on: 2026-10-18
     notes: Last commit date was not verified and a newer repository may supersede the demo repo. Recheck before relying on it.
+
+  - id: mcp-deception-incubator
+    name: MCP Deception Incubator
+    url: https://github.com/harshadk99/mcp-deception-incubator-kubernetes
+    source: https://github.com/harshadk99/mcp-deception-incubator-kubernetes
+    summary: Decoy Kubernetes MCP access portal on Cloudflare Workers that alerts when an AI agent probes for credentials or endpoints.
+    description: >-
+      Exposes a fake Kubernetes "access portal" over the Model Context Protocol, deployed on
+      Cloudflare Workers. Its trap tools return plausible-looking responses and raise an alert
+      when an autonomous agent probes for credentials, service endpoints or CI/CD webhooks,
+      giving defenders a signal that an agent is exploring an environment it should not.
+    type: Reference Implementation
+    lifecycle: [build, defend]
+    domains: [mcp-skills, agentic]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/harshadk99/mcp-deception-incubator-kubernetes/main/LICENSE
+    maintainer: Harshad Sadashiv Kadam
+    last_release: "No tagged release; latest commit 2026-09-29"
+    verification: partial
+    verified_by: direct
+    verified_on: 2026-10-26
+    disclosure: Submitted by the author, who leads the Austin chapter of the AI Security Engineers Community. Listed under the same criteria as every other entry.
+    notes: Proof-of-concept honeypot with no tagged release; review the trap logic and validate alerts against your own environment before relying on it.

@@ -40,6 +40,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [DeepTeam](../resources/README.md#deepteam) | Open-source LLM red-teaming framework with vulnerability and attack modules and mappings to OWASP and NIST. | Break |
 | [Eclipse Enclave](../resources/README.md#eclipse-enclave) | Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists. | Build |
 | [Inspect AI](../resources/README.md#inspect-ai) | Framework for reproducible LLM and agent evaluations with sandboxed tool execution. | Break |
+| [MCP Deception Incubator](../resources/README.md#mcp-deception-incubator) | Decoy Kubernetes MCP access portal on Cloudflare Workers that alerts when an AI agent probes for credentials or endpoints. | Build, Defend |
 | [Microsoft Agent Governance Toolkit](../resources/README.md#microsoft-agent-governance-toolkit) | Multi-language SDKs for agent policy enforcement, an MCP security gateway, agent identity and audit logging. | Design, Defend |
 | [MITRE ATLAS](../resources/README.md#mitre-atlas) | Knowledge base of adversary tactics, techniques and case studies against AI-enabled systems. | Design, Break |
 | [OpenTelemetry GenAI Semantic Conventions](../resources/README.md#opentelemetry-genai-semantic-conventions) | Vendor-neutral span, metric and attribute conventions for tracing GenAI calls, agents and tool use. | Defend |
@@ -56,6 +57,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 | [agent-bom](../resources/README.md#agent-bom) | Inventories local agent configs, MCP servers, skills and models, and emits CycloneDX/SPDX/SARIF. | Discover |
 | [Cisco AI Defense Skill Scanner](../resources/README.md#cisco-ai-defense-skill-scanner) | Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output. | Build |
 | [CoSAI Secure Design Patterns for Agentic Systems](../resources/README.md#cosai-secure-design-patterns-for-agentic-systems) | OASIS-hosted whitepapers and design patterns for MCP security and agentic identity and access management. | Design |
+| [MCP Deception Incubator](../resources/README.md#mcp-deception-incubator) | Decoy Kubernetes MCP access portal on Cloudflare Workers that alerts when an AI agent probes for credentials or endpoints. | Build, Defend |
 | [MCPSecBench](../resources/README.md#mcpsecbench) | Security benchmark for Model Context Protocol servers, clients and hosts. | Break |
 | [Microsoft Agent Governance Toolkit](../resources/README.md#microsoft-agent-governance-toolkit) | Multi-language SDKs for agent policy enforcement, an MCP security gateway, agent identity and audit logging. | Design, Defend |
 | [Model Context Protocol (MCP)](../resources/README.md#model-context-protocol-mcp) | Open protocol connecting AI applications to tools and data, with an OAuth-based authorization model. | Design, Build |

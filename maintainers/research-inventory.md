@@ -22,6 +22,7 @@ All checks were made on 2026-10-18. "Verification: direct" means the primary sou
 | garak | Open-Source Tool | Apache-2.0 | NVIDIA | 0.17.1 (2026-10-16, PyPI) | verified / direct | 2026-10-18 | <https://raw.githubusercontent.com/NVIDIA/garak/main/LICENSE> |
 | Guardrails AI | Open-Source Tool | Apache-2.0 | Guardrails AI | 0.11.0 (2026-08-14, PyPI) | verified / direct | 2026-10-18 | <https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE> |
 | Inspect AI | Open-Source Tool | MIT | UK AI Security Institute | 0.3.281 (2026-10-15, PyPI) | verified / direct | 2026-10-18 | <https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE> |
+| MCP Deception Incubator | Reference Implementation | MIT | Harshad Sadashiv Kadam | No tagged release; latest commit 2026-09-29 | partial / direct | 2026-10-26 | <https://raw.githubusercontent.com/harshadk99/mcp-deception-incubator-kubernetes/main/LICENSE> |
 | MCPSecBench | Benchmark | MIT | AIS2Lab | not verified | partial / delegated | 2026-10-18 | <https://raw.githubusercontent.com/AIS2Lab/MCPSecBench/main/LICENSE> |
 | Microsoft Agent Governance Toolkit | Open-Source Tool | MIT | Microsoft | v4.1.0 (2026-06-09, GitHub release) | verified / delegated | 2026-10-18 | <https://raw.githubusercontent.com/microsoft/agent-governance-toolkit/main/LICENSE> |
 | MITRE ATLAS | Open Security Framework | Apache-2.0 | MITRE | 2026-09-14 (content version 2026.09) | verified / delegated | 2026-10-18 | <https://github.com/mitre-atlas/atlas-data> |

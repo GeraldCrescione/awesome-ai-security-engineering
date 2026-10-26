@@ -73,6 +73,7 @@ Each resource appears once here, under its primary stage. Many span several stag
 | [Cisco AI Defense Skill Scanner](resources/README.md#cisco-ai-defense-skill-scanner) | Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output. | Open-Source Tool | Apache-2.0 |
 | [Eclipse Enclave](resources/README.md#eclipse-enclave) | Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists. | Open-Source Tool | MIT |
 | [Fickling](resources/README.md#fickling) | Static analyzer, decompiler and safe loader hooks for Python pickle files, including PyTorch models. | Open-Source Tool | LGPL-3.0-or-later |
+| [MCP Deception Incubator](resources/README.md#mcp-deception-incubator) | Decoy Kubernetes MCP access portal on Cloudflare Workers that alerts when an AI agent probes for credentials or endpoints. | Reference Implementation | MIT |
 | [NeMo Guardrails](resources/README.md#nemo-guardrails) | Toolkit for adding programmable guardrails (input, output, dialog, retrieval) to LLM applications. | Open-Source Tool | Apache-2.0 |
 | [Promptfoo](resources/README.md#promptfoo) | CLI and library for LLM evaluations and red-team testing, usable in CI. | Open-Source Tool | MIT |
 | [sandbox-runtime](resources/README.md#sandbox-runtime) | Filesystem and network sandbox for running agent processes with restricted access. | Open-Source Tool | Apache-2.0 |
