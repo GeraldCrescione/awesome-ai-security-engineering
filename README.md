@@ -70,6 +70,7 @@ Each resource appears once here, under its primary stage. Many span several stag
 
 | Resource | What it is | Type | License |
 |---|---|---|---|
+| [AgentRedactor](resources/README.md#agentredactor) | Local proxy that redacts PII and secrets from AI coding agent requests before they reach LLM providers, then restores them. | Open-Source Tool | MIT |
 | [Cisco AI Defense Skill Scanner](resources/README.md#cisco-ai-defense-skill-scanner) | Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output. | Open-Source Tool | Apache-2.0 |
 | [Eclipse Enclave](resources/README.md#eclipse-enclave) | Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists. | Open-Source Tool | MIT |
 | [Fickling](resources/README.md#fickling) | Static analyzer, decompiler and safe loader hooks for Python pickle files, including PyTorch models. | Open-Source Tool | LGPL-3.0-or-later |

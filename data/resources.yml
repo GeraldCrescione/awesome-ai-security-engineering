@@ -661,3 +661,27 @@ resources:
     verified_on: 2026-10-26
     disclosure: Submitted by the author, who leads the Austin chapter of the AI Security Engineers Community. Listed under the same criteria as every other entry.
     notes: Proof-of-concept honeypot with no tagged release; review the trap logic and validate alerts against your own environment before relying on it.
+
+  - id: agentredactor
+    name: AgentRedactor
+    url: https://agentredactor.negativestarinnovators.com/
+    source: https://github.com/Negative-Star-Innovators/AgentRedactor
+    summary: Local proxy that redacts PII and secrets from AI coding agent requests before they reach LLM providers, then restores them.
+    description: >-
+      HTTP proxy that sits between a coding agent and its LLM provider. It detects sensitive values
+      locally (ONNX named-entity model, regex and keyword rules), replaces them with placeholders
+      before the request leaves, and restores the originals in responses, including streamed ones.
+      Windows and Linux desktop apps and a CLI are available.
+    type: Open-Source Tool
+    lifecycle: [build, defend]
+    domains: [ai-assisted-dev]
+    license: MIT
+    license_note: ""
+    license_evidence: https://raw.githubusercontent.com/Negative-Star-Innovators/AgentRedactor/main/LICENSE
+    maintainer: Negative-Star-Innovators
+    last_release: "rolling pre-release 'latest' (2026-07-29); model weights models-v1 (2026-07-24); no versioned release"
+    verification: partial
+    verified_by: direct
+    verified_on: 2026-10-27
+    disclosure: Submitted by a co-creator of the project.
+    notes: Young project (created July 2026) with rolling builds, so pin by commit or digest. ONNX model weights are downloaded from the project's releases at runtime, and the submission states model downloads and update checks contact project infrastructure. The README was not read for those network calls.

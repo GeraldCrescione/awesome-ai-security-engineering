@@ -11,6 +11,7 @@ Integrate security into AI-powered software development, and into the developmen
 <!-- BEGIN GENERATED: stage -->
 | Resource | What it is | Type | License |
 |---|---|---|---|
+| [AgentRedactor](../resources/README.md#agentredactor) | Local proxy that redacts PII and secrets from AI coding agent requests before they reach LLM providers, then restores them. Also: Defend. | Open-Source Tool | MIT |
 | [Cisco AI Defense Skill Scanner](../resources/README.md#cisco-ai-defense-skill-scanner) | Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output. | Open-Source Tool | Apache-2.0 |
 | [CycloneDX](../resources/README.md#cyclonedx) | Bill-of-materials standard (ECMA-424) with ML-BOM support for models and datasets. Also: Discover. | Open Standard / Protocol | Apache-2.0 |
 | [Eclipse Enclave](../resources/README.md#eclipse-enclave) | Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists. | Open-Source Tool | MIT |

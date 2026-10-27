@@ -7,6 +7,7 @@ The same canonical entries as the [lifecycle pages](../lifecycle/discover.md), g
 
 | Resource | What it is | Lifecycle |
 |---|---|---|
+| [AgentRedactor](../resources/README.md#agentredactor) | Local proxy that redacts PII and secrets from AI coding agent requests before they reach LLM providers, then restores them. | Build, Defend |
 | [Cisco AI Defense Skill Scanner](../resources/README.md#cisco-ai-defense-skill-scanner) | Scanner for agent skills using YAML/YARA rules and dataflow analysis, with SARIF output. | Build |
 | [CyberSecEval (Purple Llama)](../resources/README.md#cyberseceval-purple-llama) | Meta's cybersecurity benchmark suite for LLMs, including prompt injection, insecure code and autopatch tests. | Break |
 | [Eclipse Enclave](../resources/README.md#eclipse-enclave) | Runs coding agents in per-session Docker containers with a gateway that enforces network allowlists. | Build |

@@ -11,6 +11,7 @@ Continuously protect deployed AI-native systems, and keep a human in the loop wh
 <!-- BEGIN GENERATED: stage -->
 | Resource | What it is | Type | License |
 |---|---|---|---|
+| [AgentRedactor](../resources/README.md#agentredactor) | Local proxy that redacts PII and secrets from AI coding agent requests before they reach LLM providers, then restores them. Also: Build. | Open-Source Tool | MIT |
 | [Guardrails AI](../resources/README.md#guardrails-ai) | Python framework for validating and structuring LLM inputs and outputs with pluggable validators. | Open-Source Tool | Apache-2.0 |
 | [MCP Deception Incubator](../resources/README.md#mcp-deception-incubator) | Decoy Kubernetes MCP access portal on Cloudflare Workers that alerts when an AI agent probes for credentials or endpoints. Also: Build. | Reference Implementation | MIT |
 | [Microsoft Agent Governance Toolkit](../resources/README.md#microsoft-agent-governance-toolkit) | Multi-language SDKs for agent policy enforcement, an MCP security gateway, agent identity and audit logging. Also: Design. | Open-Source Tool | MIT |

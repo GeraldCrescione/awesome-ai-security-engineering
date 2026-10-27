@@ -39,6 +39,22 @@ Provides tasks, attacks and defenses to evaluate how tool-calling LLM agents res
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/LICENSE>
 - **Notes:** Last PyPI release is about a year old and the README warns the API is still developing. A research benchmark is still useful when its tasks stay fixed.
 
+## AgentRedactor
+
+HTTP proxy that sits between a coding agent and its LLM provider. It detects sensitive values locally (ONNX named-entity model, regex and keyword rules), replaces them with placeholders before the request leaves, and restores the originals in responses, including streamed ones. Windows and Linux desktop apps and a CLI are available.
+
+- **Type:** Open-Source Tool
+- **Lifecycle:** Build, Defend
+- **Domain:** AI-Assisted Development Security
+- **License / status:** MIT
+- **Official URL:** <https://agentredactor.negativestarinnovators.com/>
+- **Source / specification:** <https://github.com/Negative-Star-Innovators/AgentRedactor>
+- **Maintainer:** Negative-Star-Innovators
+- **Latest release evidence:** rolling pre-release 'latest' (2026-07-29); model weights models-v1 (2026-07-24); no versioned release
+- **Verification:** partial (direct check, 2026-10-27); license evidence: <https://raw.githubusercontent.com/Negative-Star-Innovators/AgentRedactor/main/LICENSE>
+- **Disclosure:** Submitted by a co-creator of the project.
+- **Notes:** Young project (created July 2026) with rolling builds, so pin by commit or digest. ONNX model weights are downloaded from the project's releases at runtime, and the submission states model downloads and update checks contact project infrastructure. The README was not read for those network calls.
+
 ## Cisco AI Defense Skill Scanner
 
 Static scanner that inspects agent skills for prompt injection, data exfiltration and malicious code patterns. Output integrates with code-scanning tools through SARIF.

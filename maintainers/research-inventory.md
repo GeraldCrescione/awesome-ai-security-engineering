@@ -11,6 +11,7 @@ All checks were made on 2026-10-18. "Verification: direct" means the primary sou
 |---|---|---|---|---|---|---|---|
 | agent-bom | Open-Source Tool | Apache-2.0 | Individual maintainer (msaad00) | v0.106.1 (27 Sep, year inferred as 2026) | verified / delegated | 2026-10-18 | <https://raw.githubusercontent.com/msaad00/agent-bom/main/LICENSE> |
 | AgentDojo | Benchmark | MIT | ETH Zurich SPY Lab | 0.1.35 (2025-10-27, PyPI) | verified / direct | 2026-10-18 | <https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/LICENSE> |
+| AgentRedactor | Open-Source Tool | MIT | Negative-Star-Innovators | rolling pre-release 'latest' (2026-07-29); model weights models-v1 (2026-07-24); no versioned release | partial / direct | 2026-10-27 | <https://raw.githubusercontent.com/Negative-Star-Innovators/AgentRedactor/main/LICENSE> |
 | Cisco AI Defense Skill Scanner | Open-Source Tool | Apache-2.0 | Cisco Systems (Cisco AI Defense) | 2026-10-15 (PyPI cisco-ai-skill-scanner) | verified / delegated | 2026-10-18 | <https://raw.githubusercontent.com/cisco-ai-defense/skill-scanner/main/LICENSE> |
 | CoSAI Secure Design Patterns for Agentic Systems | Reference Implementation | CC-BY-4.0 | CoSAI (OASIS Open) | repository updated 2026-08-26 (no tagged release) | verified / delegated | 2026-10-18 | <https://raw.githubusercontent.com/cosai-oasis/ws4-secure-design-agentic-systems/main/LICENSE.md> |
 | Cybench | Benchmark | Apache-2.0 | Stanford | not verified | partial / delegated | 2026-10-18 | <https://raw.githubusercontent.com/andyzorigin/cybench/main/LICENSE> |
