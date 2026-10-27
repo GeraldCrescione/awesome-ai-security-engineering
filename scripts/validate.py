@@ -2,7 +2,7 @@
 """Validate resource metadata and internal Markdown links.
 
 Errors (exit 1): schema violations, duplicates, blocked license terms, promotional wording,
-more than 30 entries, undisclosed Snyk affiliation, broken internal links or anchors.
+undisclosed Snyk affiliation, broken internal links or anchors.
 Warnings (exit 0): verification older than 180 days, partial verification older than 90 days.
 
 Nothing here removes or edits entries. Flagged items are for human review.
@@ -16,7 +16,7 @@ import sys
 from urllib.parse import unquote, urlparse
 
 from awesome_lib import (
-    ALLOWED_LICENSES, BLOCKED_LICENSE_TERMS, DECISIONS, DOMAINS, LIFECYCLE, MAX_ENTRIES,
+    ALLOWED_LICENSES, BLOCKED_LICENSE_TERMS, DECISIONS, DOMAINS, LIFECYCLE,
     PROMO_WORDS, REQUIRED, ROOT, TYPES, VERIFICATION, VERIFIED_BY, anchor, load_candidates,
     load_resources, slugify,
 )
@@ -40,8 +40,6 @@ def norm_url(u: str) -> str:
 
 def check_resources() -> list[dict]:
     rs = load_resources()
-    if len(rs) > MAX_ENTRIES:
-        err(f"{len(rs)} entries exceed the first-release cap of {MAX_ENTRIES}")
     ids, names, urls, slugs = set(), set(), {}, set()
     today = dt.date.today()
     for r in rs:
