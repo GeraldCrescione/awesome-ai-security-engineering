@@ -3,7 +3,7 @@
 
 Errors (exit 1): schema violations, duplicates, blocked license terms, promotional wording,
 more than 30 entries, undisclosed Snyk affiliation, broken internal links or anchors.
-Warnings (exit 0): verification older than 180 days, partial verification.
+Warnings (exit 0): verification older than 180 days, partial verification older than 90 days.
 
 Nothing here removes or edits entries. Flagged items are for human review.
 Usage: python scripts/validate.py
@@ -88,7 +88,9 @@ def check_resources() -> list[dict]:
         if r.get("verification") not in VERIFICATION:
             err(f"{rid}: verification must be one of {VERIFICATION}")
         elif r["verification"] == "partial":
-            warn(f"{rid}: verification is 'partial' (see notes); schedule a re-check")
+            pd = r.get("verified_on")
+            if isinstance(pd, dt.date) and (today - pd).days > 90:
+                warn(f"{rid}: 'partial' verification is older than 90 days; re-check")
         if r.get("verified_by") not in VERIFIED_BY:
             err(f"{rid}: verified_by must be one of {VERIFIED_BY}")
         vd = r.get("verified_on")
