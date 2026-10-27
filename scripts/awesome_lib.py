@@ -13,8 +13,6 @@ ROOT = Path(__file__).resolve().parent.parent
 RESOURCES_FILE = ROOT / "data" / "resources.yml"
 CANDIDATES_FILE = ROOT / "maintainers" / "candidates.yml"
 
-MAX_ENTRIES = 30
-
 LIFECYCLE = {
     "discover": "Discover",
     "design": "Design",
