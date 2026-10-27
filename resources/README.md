@@ -204,6 +204,22 @@ Evaluation framework from the UK AI Security Institute used to build repeatable 
 - **Verification:** verified (direct check, 2026-10-18); license evidence: <https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE>
 - **Notes:** Evaluation datasets in the separate inspect_evals repository have their own licenses.
 
+## MCP Deception Incubator
+
+Exposes a fake Kubernetes "access portal" over the Model Context Protocol, deployed on Cloudflare Workers. Its trap tools return plausible-looking responses and raise an alert when an autonomous agent probes for credentials, service endpoints or CI/CD webhooks, giving defenders a signal that an agent is exploring an environment it should not.
+
+- **Type:** Reference Implementation
+- **Lifecycle:** Build, Defend
+- **Domain:** MCP and Agent Skills Security; Agentic AI Security
+- **License / status:** MIT
+- **Official URL:** <https://github.com/harshadk99/mcp-deception-incubator-kubernetes>
+- **Source / specification:** <https://github.com/harshadk99/mcp-deception-incubator-kubernetes>
+- **Maintainer:** Harshad Sadashiv Kadam
+- **Latest release evidence:** No tagged release; latest commit 2026-09-29
+- **Verification:** partial (direct check, 2026-10-26); license evidence: <https://raw.githubusercontent.com/harshadk99/mcp-deception-incubator-kubernetes/main/LICENSE>
+- **Disclosure:** Submitted by the author, who leads the Austin chapter of the AI Security Engineers Community. Listed under the same criteria as every other entry.
+- **Notes:** Proof-of-concept honeypot with no tagged release; review the trap logic and validate alerts against your own environment before relying on it.
+
 ## MCPSecBench
 
 Benchmark of attack scenarios against MCP deployments, intended to measure how MCP servers and agents behave under adversarial conditions.
