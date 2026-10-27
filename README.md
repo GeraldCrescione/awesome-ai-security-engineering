@@ -36,7 +36,7 @@ Five complementary, iterative stages organize this list. Each page explains the 
 - [Research and benchmarks](research/README.md), including a [VulnBench write-up](research/vulnbench.md)
 - [Best practices](best-practices/README.md)
 - [Learning and labs](learning/README.md)
-- [Foundations: initial vision ](foundations/initial-vision.md)
+- - [Foundations: initial vision](foundations/initial-vision.md)
 - [Foundations: definition, responsibilities, frameworks](foundations/what-is-ai-security-engineering.md)
 - [Community](community/README.md)
 - [Contributing](CONTRIBUTING.md)
